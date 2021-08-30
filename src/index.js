@@ -1,3 +1,10 @@
+/**
+ * Async call reducer
+ * @param {Object} options
+ * @param {String} options.key Storage key
+ * @param {Promise} options.callback Async callback function
+ * @returns Promise<any> Callback function data
+ */
 export default function asyncCallReducer({
 	key = 'asyncCallReducer',
 	storage = 'sessionStorage',
