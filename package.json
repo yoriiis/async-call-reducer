@@ -23,7 +23,7 @@
 	],
 	"main": "src/index.js",
 	"scripts": {
-		"test": "jest",
+		"test": "jest --verbose --coverage",
 		"test:eslint": "eslint src",
 		"test:eslint:fix": "eslint . --ignore-pattern dist --fix --ignore-pattern lib",
 		"test:markdown": "markdownlint '**/*.md' --ignore node_modules"
