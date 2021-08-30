@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+    ],
+    "settings": {
+        "[javascript]": {
+            "editor.formatOnSave": true
+        },
+        "[markdown]": {
+            "editor.formatOnSave": true
+        },
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true,
+            "source.fixAll.stylelint": true
+        },
+        "editor.formatOnSave": false,
+        "editor.tabSize": 4,
+        "files.trimTrailingWhitespace": true,
+        "javascript.format.enable": false,
+        "javascript.validate.enable": false,
+        "typescript.validate.enable": false,
+        "search.exclude": {
+            "**/node_modules": true
+        },
+        "editor.rulers": [100]
+    },
+    "extensions": {
+        "recommendations": [
+            "esbenp.prettier-vscode",
+            "dbaeumer.vscode-eslint",
+        ]
+    }
+}
