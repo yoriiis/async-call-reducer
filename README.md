@@ -90,9 +90,13 @@ asyncCallReducer({
 
 Tells the function the promise to be executed.
 
+> 💡 Keep the `async` keyword, the `callback` function must returns a Promise.
+
 ```js
 asyncCallReducer({
-  callback: async () => {}
+  callback: async () => {
+    // Request data from an API and return data here
+  }
 });
 ```
 
