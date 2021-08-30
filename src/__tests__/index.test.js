@@ -4,8 +4,8 @@
 
 'use strict';
 
-import mockFetch from './mocks/fetch';
-import mockBrowserStorage from './mocks/browser-storage';
+import mockFetch from '../__mocks__/fetch';
+import mockBrowserStorage from '../__mocks__/browser-storage';
 import asyncCallReducer from '../index';
 import { afterEach, beforeEach, expect, jest } from '@jest/globals';
 
