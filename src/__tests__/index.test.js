@@ -62,7 +62,7 @@ describe('asyncCallReducer function', () => {
 		jest.spyOn(document, 'addEventListener');
 
 		window.sessionStorage.setItem('swapiLoading', true);
-		const result = asyncCallReducer({
+		asyncCallReducer({
 			key: 'swapi',
 			callback
 		});
@@ -75,9 +75,7 @@ describe('asyncCallReducer function', () => {
 		);
 
 		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('swapiData');
-		expect(window.sessionStorage.getItem).toHaveBeenCalledWith(
-			'swapiLoading'
-		);
+		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('swapiLoading');
 		expect(document.addEventListener).toHaveBeenCalledWith(
 			'swapiDataAvailable',
 			expect.any(Function)
@@ -95,17 +93,10 @@ describe('asyncCallReducer function', () => {
 		});
 
 		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('swapiData');
-		expect(window.sessionStorage.getItem).toHaveBeenCalledWith(
-			'swapiLoading'
-		);
-		expect(window.sessionStorage.setItem).toHaveBeenCalledWith(
-			'swapiLoading',
-			true
-		);
+		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('swapiLoading');
+		expect(window.sessionStorage.setItem).toHaveBeenCalledWith('swapiLoading', true);
 		expect(fetch).toHaveBeenCalledTimes(1);
-		expect(fetch).toHaveBeenCalledWith(
-			'https://swapi.dev/api/people/?page=1'
-		);
+		expect(fetch).toHaveBeenCalledWith('https://swapi.dev/api/people/?page=1');
 		expect(window.sessionStorage.setItem).toHaveBeenCalledWith(
 			'swapiData',
 			JSON.stringify(swapiData)
@@ -133,9 +124,7 @@ describe('asyncCallReducer function', () => {
 		expect(resultFirstCall).toStrictEqual(swapiData);
 		expect(resultFromStorage).toStrictEqual(swapiData);
 		expect(fetch).toHaveBeenCalledTimes(1);
-		expect(fetch).toHaveBeenCalledWith(
-			'https://swapi.dev/api/people/?page=1'
-		);
+		expect(fetch).toHaveBeenCalledWith('https://swapi.dev/api/people/?page=1');
 		expect(document.dispatchEvent).toHaveBeenCalledWith(
 			new window.CustomEvent('swapiDataAvailable', {
 				detail: {
@@ -162,13 +151,9 @@ describe('asyncCallReducer function', () => {
 
 		expect(resultFromEvent).toStrictEqual(swapiData);
 		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('swapiData');
-		expect(window.sessionStorage.getItem).toHaveBeenCalledWith(
-			'swapiLoading'
-		);
+		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('swapiLoading');
 		expect(fetch).toHaveBeenCalledTimes(1);
-		expect(fetch).toHaveBeenCalledWith(
-			'https://swapi.dev/api/people/?page=1'
-		);
+		expect(fetch).toHaveBeenCalledWith('https://swapi.dev/api/people/?page=1');
 		expect(document.addEventListener).toHaveBeenCalledWith(
 			'swapiDataAvailable',
 			expect.any(Function)
@@ -178,15 +163,11 @@ describe('asyncCallReducer function', () => {
 	it('should init the asyncCallReducer function with the default key', async () => {
 		jest.spyOn(window.sessionStorage, 'getItem');
 
-		const result = await asyncCallReducer({
+		await asyncCallReducer({
 			callback
 		});
 
-		expect(window.sessionStorage.getItem).toHaveBeenCalledWith(
-			'asyncCallReducerData'
-		);
-		expect(window.sessionStorage.getItem).toHaveBeenCalledWith(
-			'asyncCallReducerLoading'
-		);
+		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('asyncCallReducerData');
+		expect(window.sessionStorage.getItem).toHaveBeenCalledWith('asyncCallReducerLoading');
 	});
 });

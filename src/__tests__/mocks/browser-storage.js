@@ -1,6 +1,5 @@
 /**
  * Mock implementation of Browser storage
- *
  * @return {Object} Object implementation of browser storage
  */
 export default function mockBrowserStorage(method = 'localStorage') {
