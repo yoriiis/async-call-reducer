@@ -24,7 +24,7 @@ yarn add --dev async-call-reducer
 
 ## Environment
 
-`asyncCallReducer` was built for Node.js `>=12.14.0`.
+`asyncCallReducer` was built for Node.js `>=12`.
 
 ## Demo
 

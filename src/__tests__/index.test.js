@@ -2,8 +2,6 @@
  * @jest-environment jsdom
  */
 
-'use strict';
-
 import mockFetch from '../__mocks__/fetch';
 import mockBrowserStorage from '../__mocks__/browser-storage';
 import asyncCallReducer from '../index';
