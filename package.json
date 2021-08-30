@@ -1,0 +1,46 @@
+{
+	"name": "async-call-reducer",
+	"version": "1.0.0",
+	"description": "Async call reducer is a function to reduce calls using browser storage.",
+	"keywords": [
+		"async",
+		"request",
+		"requests",
+		"reducer",
+		"http",
+		"https",
+		"http2",
+		"fetch",
+		"storage"
+	],
+	"homepage": "https://github.com/yoriiis/async-call-reducer",
+	"bugs": "https://github.com/yoriiis/async-call-reducer/issues",
+	"repository": "https://github.com/yoriiis/async-call-reducer.git",
+	"license": "ISC",
+	"author": "Yoriiis aka Joris DANIEL",
+	"files": [
+		"src/index.js"
+	],
+	"main": "src/index.js",
+	"scripts": {
+		"test": "jest",
+		"test:eslint": "eslint src",
+		"test:eslint:fix": "eslint . --ignore-pattern dist --fix --ignore-pattern lib",
+		"test:markdown": "markdownlint '**/*.md' --ignore node_modules"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.15.0",
+		"babel-eslint": "^10.1.0",
+		"babel-plugin-dynamic-import-node": "^2.3.3",
+		"eslint": "^7.20.0",
+		"eslint-config-standard": "^16.0.2",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-promise": "^5.1.0",
+		"eslint-plugin-react": "^7.22.0",
+		"eslint-plugin-standard": "^5.0.0",
+		"jest": "^27.0.6",
+		"markdownlint-cli": "^0.28.1"
+	}
+}
