@@ -1,8 +1,8 @@
-# asyncCallReducer
+# AsyncCallReducer
 
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/yoriiis/async-call-reducer/Build/main?style=for-the-badge) [![Coverage Status](https://img.shields.io/coveralls/github/yoriiis/async-call-reducer?style=for-the-badge)](https://coveralls.io/github/yoriiis/async-call-reducer?branch=main)
 
-The `asyncCallReducer` is a function to reduce calls using browser storage. A Promise can be encapsulated, a single HTTP request will be triggered regardless of the number of calls. Concurrent calls are added on a queue and return's data are stored in the browser.
+The `AsyncCallReducer` is a function to reduce calls using browser storage. A Promise can be encapsulated, a single HTTP request will be triggered regardless of the number of calls. Concurrent calls are added on a queue and return's data are stored in the browser.
 
 Rules:
 
@@ -24,11 +24,11 @@ yarn add --dev async-call-reducer
 
 ## Environment
 
-`asyncCallReducer` was built for Node.js `>=12`.
+`AsyncCallReducer` was built for Node.js `>=12`.
 
 ## Demo
 
-The project includes an example of an implementation of `asyncCallReducer` in the directory `./demo/`.
+The project includes an example of an implementation of `AsyncCallReducer` in the directory `./demo/`.
 
 ## Usage
 
@@ -41,7 +41,7 @@ async function getData() {
 }
 ```
 
-By wrapping the function with the `asyncCallReducer`, a single HTTP request will be triggered. Other calls will return exactly the same value, either from the storage or from the queue if the calls was concurrent.
+By wrapping the function with the `AsyncCallReducer`, a single HTTP request will be triggered. Other calls will return exactly the same value, either from the storage or from the queue if the calls was concurrent.
 
 ```diff
 async function getData() {
@@ -102,6 +102,6 @@ asyncCallReducer({
 
 ## Licence
 
-`asyncCallReducer` is licensed under the [MIT License](http://opensource.org/licenses/MIT).
+`AsyncCallReducer` is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
 Created with ♥ by [@yoriiis](http://github.com/yoriiis).
