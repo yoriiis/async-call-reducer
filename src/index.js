@@ -21,7 +21,7 @@ export default function asyncCallReducer({
 			document.addEventListener(dataAvailableKey, function (e) {
 				return resolve(e.detail.data);
 			});
-		} else if (!window[storage].getItem(loadingKey)) {
+		} else {
 			window[storage].setItem(loadingKey, true);
 			callback().then(function (data) {
 				window[storage].setItem(dataKey, JSON.stringify(data));
