@@ -1,6 +1,6 @@
 # AsyncCallReducer
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/yoriiis/async-call-reducer/Build/main?style=for-the-badge) [![Coverage Status](https://img.shields.io/coveralls/github/yoriiis/async-call-reducer?style=for-the-badge)](https://coveralls.io/github/yoriiis/async-call-reducer?branch=main)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/yoriiis/async-call-reducer/build.yml?branch=main&style=for-the-badge) [![Coverage Status](https://img.shields.io/coveralls/github/yoriiis/async-call-reducer?style=for-the-badge)](https://coveralls.io/github/yoriiis/async-call-reducer?branch=main)
 
 The `AsyncCallReducer` is a function to reduce calls using browser storage. A Promise can be encapsulated, a single HTTP request will be triggered regardless of the number of calls. Concurrent calls are added on a queue and return's data are stored in the browser.
 
